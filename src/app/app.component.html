@@ -1,10 +1,11 @@
-<header>
+<mat-toolbar color="primary">
   <h1>Lista zadań</h1>
-  <nav>
-  <a routerLink="/tasks" routerLinkActive="active">Lista zadań</a>
-  <a routerLink="/archive" routerLinkActive="active"> Archiwum zadań</a>
-  </nav>
-</header>
+  <div class="gap"></div>
+  <mat-chip-listbox>
+    <a mat-chip-option color="accent" routerLink="/tasks" routerLinkActive="active">Lista zadań</a>
+    <a mat-chip-option color="accent" routerLink="/archive" routerLinkActive="active"> Archiwum zadań</a>
+  </mat-chip-listbox>
+</mat-toolbar>
 
 <div class="router-outlet">
   <router-outlet></router-outlet>

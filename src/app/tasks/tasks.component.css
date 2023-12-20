@@ -8,48 +8,27 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
-
-.add-task .form-group {
-  display: flex;
-  flex-direction: column;
-}
-
 @media screen and (min-width: 768px) {
   .add-task {
     grid-template-columns: 1fr 1fr auto;
   }
-
-  .add-task .form-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .add-task .form-group .form-control {
-    flex-grow: 1;
-  }
 }
-.task.completed{
+
+mat-card.completed mat-card-header{
   opacity: 0.5;
 }
-.task.completed .title {
+mat-card.completed mat-card-title{
   text-decoration: line-through;
   opacity: 0.5;
 }
-.task.completed .deadline {
+mat-card.completed mat-card-subtitle {
   opacity: 0;
 }
-.tasks .task {
-  background-color: #cad7fc;
-  border: 1px dotted black;
+mat-card{
   margin-bottom: 10px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'deadline actions' 'title title';
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -57,16 +36,4 @@
     grid-template-columns: 3fr 1fr auto;
     grid-template-areas: 'title deadline actions';
   }
-}
-.tasks .task .deadline span {
-  padding: 5px;
-  background-color: green;
-  border-radius: 8px;
-  color:white;
-  font-size: 0.8em;
-}
-
-.tasks .task .actions {
-  grid-area: actions;
-  text-align: right;
 }

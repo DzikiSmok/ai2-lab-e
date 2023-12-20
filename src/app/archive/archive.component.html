@@ -1,16 +1,16 @@
 <div class="container">
   <h2>Archiwum zadań</h2>
   <div class="tasks">
-    <div class="task" [class.completed]="task.completed" *ngFor="let task of tasks">
-      <div class="title">{{task.title}}</div>
-      <div class="deadline">
-        <span *ngIf="task.deadline">{{task.deadline}}</span>
-      </div>
-      <div class="actions">
-        <button type="button" class="btn" (click)="delete(task)">
-          Usuń zadanie
+    <mat-card *ngFor="let task of tasks">
+      <mat-card-header>
+        <mat-card-title>{{task.title}}</mat-card-title>
+        <mat-card-subtitle *ngIf="task.deadline">{{task.deadline | date: 'yyyy-MM-dd' }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions align="end">
+        <button mat-icon-button color="accent" type="button" class="btn" (click)="delete(task)">
+          <mat-icon>delete</mat-icon>
         </button>
-      </div>
-    </div>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>

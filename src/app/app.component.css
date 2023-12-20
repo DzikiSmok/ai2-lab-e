@@ -1,18 +1,8 @@
-header{
-  background-color: darkblue;
-  color:white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
-  margin-bottom: 1em;
-}
-header nav{
-  gap: 1em;
+.gap{
+  flex: 1 1 auto;
 }
 a{ color: white; text-decoration: none;}
 a:hover{color:red;}
-
 footer{
   background-color: lightgreen;
 }

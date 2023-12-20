@@ -63,4 +63,16 @@ export class TasksComponent implements OnInit{
   }
 
 
+  canAddTask(): boolean {
+    return !(this.newTask.title == "" || this.newTask.title === undefined);
+  }
+
+  canArchiveCompleted(): boolean {
+    for(const task of this.tasks) {
+      if (task.completed) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
